@@ -7,7 +7,7 @@ public class MyNumberTest {
 
   @Test public void simple() {
     MyNumber<Integer> foo = new MyNumber<Integer>(0);
-    assertTrue("it is even", !foo.isEven());
+    assertTrue("it is even", foo.isEven());
   }
 
 }
