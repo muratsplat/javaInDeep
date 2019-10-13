@@ -8,5 +8,4 @@ jdk:
 
 scripts:
   - gradle assemble
-  - gradle check
-  - gradle test
+  - gradle check test

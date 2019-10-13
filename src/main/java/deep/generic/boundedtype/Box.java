@@ -1,5 +1,7 @@
 package deep.generic.boundedtype;
 
+// https://docs.oracle.com/javase/tutorial/java/generics/bounded.html
+
 public class Box<T> {
 
   private T t;
