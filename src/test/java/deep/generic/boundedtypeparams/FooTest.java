@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.lang.Comparable;
 // import static org.junit.Assert.*;
 
+// https://docs.oracle.com/javase/tutorial/java/generics/boundedTypeParams.html
 public class FooTest {
 
   @Test public void simple() {
