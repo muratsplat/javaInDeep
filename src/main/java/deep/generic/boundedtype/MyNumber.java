@@ -1,0 +1,11 @@
+package deep.generic.boundedtype;
+
+
+public class MyNumber<T extends Integer> {
+  private T n;
+  
+  public MyNumber(T n)  { this.n = n; }
+  public boolean isEven() {
+      return n.intValue() % 2 == 0;
+  }
+}
