@@ -15,7 +15,7 @@ public class FooTest {
     assertEquals(4, actual);
 
     Long[] longNumbers = new Long[]{1L,2L,3L,4L}; 
-    actual = Foo.countGreaterThan(longNumbers, new Long(0));
+    actual = Foo.countGreaterThan(longNumbers, 0L);
     assertEquals(4, actual);
 
 
