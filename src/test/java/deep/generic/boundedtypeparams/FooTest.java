@@ -18,12 +18,8 @@ public class FooTest {
     actual = Foo.countGreaterThan(longNumbers, 0L);
     assertEquals(4, actual);
 
-
     String[] Strings = new String[]{"b","c","d","e"}; 
     actual = Foo.countGreaterThan(Strings, "a");
     assertEquals(4, actual);
-  
   }
-
-
 }
