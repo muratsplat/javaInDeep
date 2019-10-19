@@ -3,6 +3,9 @@ package deep.generic.typeinference;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -28,4 +31,20 @@ public class TypeinferenceTest {
     assertEquals("0,10 1,20 2,30", actual1);
   }
 
+  @Test public void two() {
+    Map<String, List<String>> myMap = new HashMap<>();
+    myMap.put("soo", new ArrayList<String>());
+    // Map<String, List<String>> myMapUnSafe = new HashMap(); // unchecked conversion warning
+    // myMapUnSafe.put("foo", new ArrayList<String>());
+
+  }
+
+  @Test public void three() {
+    new MyGenericClass<Integer>("");
+    new MyGenericClass<Long>("");
+    MyGenericClass<Long> foo =  new MyGenericClass<>(1L);
+    MyGenericClass<String> boo =  new MyGenericClass<>("sdsd");
+
+
+  }
 }
