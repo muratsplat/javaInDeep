@@ -36,7 +36,8 @@ public class MyListTest {
         return Integer.parseInt(t);
       }
     }).mapToInt(Integer::intValue).sum());
-    
+    // the version pf lambda 
+    assertEquals(10, barList.stream().map(s -> Integer.parseInt(s)).mapToInt(Integer::intValue).sum());
     assertEquals(new Integer(99), barList.getPayload(0));
   }
 
