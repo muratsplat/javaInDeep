@@ -1,22 +1,15 @@
 package deep.generic.subtyping;
 
 import static org.junit.Assert.assertEquals;
-
 import java.util.function.Function;
-
 import org.junit.Test;
-
-
 public class MyListTest {
-
 
   @Test public void simple() {
 
     PayloadList<Integer,String> fooList = new MyList<>();
-
     fooList.add(1);
     fooList.add(2);
-
     fooList.setPayload(0, "Foo");
 
     assertEquals(new Integer(1), fooList.stream().sorted().findFirst().get());
