@@ -3,6 +3,8 @@ package deep.generic.boundedtypeparams;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+
 // import static org.junit.Assert.*;
 
 // https://docs.oracle.com/javase/tutorial/java/generics/boundedTypeParams.html
