@@ -18,7 +18,8 @@ public class CalculatorTest {
     List<Number> numbers = Arrays.asList(1L,4.0,9);
     Double actual2 = Calculator.doIt(numbers).doubleValue();
     assertEquals(new Double(14.0), actual2);
-    
+
+    // this shows the generic is not essential for doing that :)
     Number[] numbers3 = {1L,4.0,9};
     Number actual3 = Calculator.doIt(numbers3);
     assertEquals(new Double(14.0), actual3);
