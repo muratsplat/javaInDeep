@@ -4,6 +4,7 @@ import java.util.List;
 // https://docs.oracle.com/javase/tutorial/java/generics/upperBounded.html
 
 public class Calculator {
+  
   public static Number doIt(List<? extends Number> numbers) {
     return numbers.stream().mapToDouble(n -> n.doubleValue()).sum();
   }
