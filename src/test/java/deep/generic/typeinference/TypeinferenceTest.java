@@ -3,6 +3,7 @@ package deep.generic.typeinference;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,8 +44,6 @@ public class TypeinferenceTest {
     new MyGenericClass<Integer>("");
     new MyGenericClass<Long>("");
     MyGenericClass<Long> foo =  new MyGenericClass<>(1L);
-    MyGenericClass<String> boo =  new MyGenericClass<>("sdsd");
-
-
+    MyGenericClass<String> boo =  new MyGenericClass<>(1L);
   }
 }
