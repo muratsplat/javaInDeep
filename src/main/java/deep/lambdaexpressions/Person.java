@@ -4,14 +4,26 @@ import java.time.LocalDate;
 
 public class Person {
 
+  public Person(String name, Person.Sex gender) {
+    this.name = name;
+    this.gender = gender;
+    this.birthday = LocalDate.now();
+  }
+
+  public Person(String name, Person.Sex gender, long age) {
+    this.name = name;
+    this.gender = gender;
+    this.birthday = LocalDate.now().plusYears(age * 1);
+  }
+
   public enum Sex {
       MALE, FEMALE
   }
 
-  String name;
-  LocalDate birthday;
-  Sex gender;
-  String emailAddress;
+  private String name;
+  private LocalDate birthday;
+  private Sex gender;
+  private String emailAddress;
 
   public int getAge() { 
     return LocalDate.now().getYear() - birthday.getYear();
@@ -74,6 +86,21 @@ public class Person {
   
   @Override
   public String toString() {
-    return String.format("Person[Name: %s]", this.name);
+    return String.format("Person[Name: %s, Age: %d, Gender: %s]", this.getName(), this.getAge(), this.getGender());
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Person) {
+      Person cast = (Person) obj;
+      return this.getAge() == cast.getAge() 
+        && this.getName().equals(cast.getName())
+        && this.getGender().equals(cast.getGender());
+    }
+    return false;
+  }
+
+  public static int compareByAge(Person a, Person b) {
+    return a.birthday.compareTo(b.birthday);
   }
 }
